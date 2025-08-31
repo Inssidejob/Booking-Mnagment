@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Movie Booking — Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">MovieBook</div>
+    <div class="search">
+      <input id="searchInput" placeholder="Search movies, cinemas..." />
+      <button id="searchBtn">Search</button>
+    </div>
+    <nav class="navlinks">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="poster" id="mainPoster">Poster</div>
+      <div class="controls">
+        <label for="cinema">Cinema</label>
+        <select id="cinema">
+          <option value="ABC">ABC Cinema</option>
+          <option value="WWQ">WWQ Theatre</option>
+          <option value="PHY">PHY Plex</option>
+          <option value="INV">INV Screens</option>
+        </select>
+
+        <label for="time">Timings</label>
+        <select id="time">
+          <option>8:30 - 10:00</option>
+          <option>13:20 - 15:30</option>
+          <option>18:40 - 21:00</option>
+          <option>22:00 - 00:00</option>
+        </select>
+
+        <label for="seats">Seats</label>
+        <select id="seats">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+
+        <button id="bookBtn" class="primary">Book Now</button>
+        <div id="message" class="message" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h3>Popular Cinemas</h3>
+      <div class="cards">
+        <div class="card" data-link="https://in.bookmyshow.com">
+          <div class="thumb">IMG</div>
+          <div class="meta">Cinema ABC</div>
+        </div>
+        <div class="card" data-link="https://in.bookmyshow.com">
+          <div class="thumb">IMG</div>
+          <div class="meta">Cinema WWQ</div>
+        </div>
+        <div class="card" data-link="https://in.bookmyshow.com">
+          <div class="thumb">IMG</div>
+          <div class="meta">Cinema PHY</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bookings">
+      <h3>Your Bookings</h3>
+      <ul id="bookingsList"></ul>
+    </section>
+  </main>
+
+  <!-- Modal for ticket download -->
+  <div id="ticketModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <h4>Booking Confirmed</h4>
+      <p id="ticketText"></p>
+      <div class="modal-actions">
+        <button id="downloadTicket" class="primary">Download Ticket</button>
+        <button id="closeModal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <small>Demo booking app • Use for portfolio. Images were replaced with placeholders.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
